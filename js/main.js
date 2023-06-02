@@ -9,10 +9,10 @@
 
     // 
 
-    let menu = new Menu({
+     let menu = new Menu({
         container: '.main-header__nav',
-        toogleBtn: '.main-header__data-menu',
-        widthEnabled: 1024
+        toggleBtn: '.main-header__data-menu',
+        widthEnabled: 1025
     });
 
 })();
