@@ -28,6 +28,7 @@ img  {
 
 /* Header */
 .main-header {
+    z-index: 999;
     background-color: var(--white-generic-color);
     width: 100%;
     display: flex;
@@ -58,9 +59,100 @@ img  {
     display: inline-block;
 }
 
+/* JS DO CAROUSEL */
+
 .js .main-header__nav {
     transition: max-height 1s;
 }
+
+.js .corousel {
+    overflow: hidden;
+}
+
+.js .corousel .slideshow {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    max-width: 900px;
+}
+
+.js .corousel  figure {
+    opacity: 0;
+    transition: 1s;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.js .corousel figure.show {
+    position: static;
+    opacity: 1;
+}
+
+.js .corousel .prev, .js .corousel .next {
+    z-index: 99;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    color: var(--white-generic-color);
+}
+
+.js .corousel .prev {
+    left: 10px;
+}
+
+.js .corousel .next {
+    right: 10px;
+}
+
+/* QUOTES CAROUSEL */
+
+.js .quote-container .quote-slideshow {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    max-width: 900px;
+}
+
+.js .quote-container figure {
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.js .quote-container figure h2 {
+    text-align: center;
+    padding:0 30px;
+    margin: 0;
+}
+
+.js .quote-container figure.show {
+    opacity: 1;
+    position: static;
+}
+
+.js .quote-container .prev, .js .quote-container .next {
+    z-index: 99;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    color: var(--white-generic-color);
+}
+
+.js .quote-container .prev {
+    left: 10px;
+}
+
+.js .quote-container .next {
+    right: 10px;
+}
+
+/* NAVIGATOR */
 
 .main-header__nav ul {
     margin: 0;
@@ -270,6 +362,7 @@ img  {
 }
 
 .lastesd-articles__thumbs img {
+    width: 100%;
     display: block;
 }
 
